@@ -1,0 +1,87 @@
+.remove-padding
+{
+	padding:0;
+}
+.hr
+{
+	border:none;
+	background-repeat: no-repeat;
+	display: block;
+}
+.text
+{
+	font-size: 16px;
+	color: $greyish;
+	line-height: 40px;
+}
+.big-text
+{
+	font-weight: $extrabold;
+	text-transform: $upper;
+}
+.center
+{
+	text-align: center;
+}
+.block
+{
+	display: block;
+}
+.in-b
+{
+	display: inline-block;
+}
+.icon
+{
+	@extend .block;
+	color:$Green;
+}
+.title-under-icon
+{
+	color: $greyish;
+	font-weight: $extrabold;
+	@extend .block;
+	
+}
+.text-under-icon
+{
+	color: $greyish;
+	@extend .block;
+	font-size: 12px;
+}
+.inherit-h
+{
+	height: inherit;
+}
+.gbg
+{
+	background-color:#f0f0e8;
+}
+.full-width
+{
+	width: 100%;
+}
+.big-text-top
+{
+		@extend .center;
+		padding:100px 0 0 0;
+}
+.no-text-d
+{
+	text-decoration: $none;
+}
+.contact-form-inner
+{
+	border-bottom:1px solid #898989;
+			border-left:none;
+			border-top:none;
+			border-right:none;
+			background-color:transparent;
+			display: block;
+			width: 54.2%;
+			margin: 10px auto;
+			@extend .center;
+			text-transform: $upper;
+		margin-bottom: 30px;
+		outline: none;
+}

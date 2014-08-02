@@ -1,0 +1,367 @@
+@import "variables";
+@import "mixins";
+@import "common";
+header
+{
+	background-color:$Green;
+	position: fixed;
+	right:0;
+	left:0;
+	z-index: 2;
+	.logo
+	{
+		color: $white;
+		font-size: 27px;
+		@extend .big-text;
+		letter-spacing: -2px;
+		padding: 15px;
+		&:hover
+		{
+			@extend .no-text-d;
+		}
+		span
+		{
+			color: $yellow;
+		}
+	}
+	.bars
+	{
+		color: $white;
+		font-size: 20px;
+		padding: 22px;
+	}
+	.navbar
+	{
+		ul
+		{
+			li
+			{
+				a
+				{
+					color: $white;
+					font-size: 12px;
+					@extend .big-text;
+					@extend .center;
+					&:hover
+					{
+						color: $yellow;
+						@extend .no-text-d;
+						@include transition(all, 0.8s, ease-in-out);
+
+					}
+				}
+			}
+		}
+	}
+}
+.with-slider 
+{
+	height:790px;
+	@media only screen and (min-width : 320px) and (max-width : 480px){
+		height:600px;
+	}
+	.carousel 
+	{
+		position: relative;
+		img
+		{
+			height:790px;
+			@extend .full-width;
+			@media only screen and (min-width : 320px) and (max-width : 480px){
+			height:600px;
+			}
+		}
+	}
+	.ws-text
+	{
+		position: absolute;
+		top: 270px;
+		@media only screen and (min-width : 320px) and (max-width : 480px){
+			top: 150px;
+		}
+		@extend .center;
+		h2,h1,h3
+		{
+			color: $white;
+		}
+		h2
+		{
+			font-size: 30px;
+		}
+		h1
+		{
+			font-size: 68px;
+			@extend .big-text;
+			letter-spacing: 30px;
+			@media only screen and (min-width : 320px) and (max-width : 480px){
+				font-size: 30px;
+				letter-spacing: 10px;
+			}
+			@media only screen and (min-width : 480px) and (max-width : 768px){
+				font-size: 50px;
+				letter-spacing: 10px;
+			}
+		}
+		h3
+		{
+			font-size: 18px;
+		}
+		hr
+		{
+			background-image: url(../images/mos1.png);
+			height: 25px;
+			margin: 50px auto;
+			width: 110px;
+			@extend .hr;
+		}
+	}
+}
+.yellow-btn
+		{
+			color: $blackish;
+			font-size: 14px;
+			line-height: 50px;
+			padding:10px 40px;
+			background-color:$yellowish;
+			@extend .big-text;
+			@extend .in-b;
+			border:3px solid $yellowish;
+			@include transition(all, 0.5s, ease-in-out);
+			&:hover
+			{
+				color: $yellow;
+				background-color:$blackish;
+				@extend .no-text-d;
+				-webkit-transform: scale(0.9); 
+				transform: scale(0.9); 
+			}
+		}
+.big-title
+{
+	font-size:46px;
+	line-height:46px;
+	color:$Green;
+	@extend .big-text;
+	@extend .block;
+}
+	.second-m
+	{
+			background-image: url(../images/mos2.png);
+			height: 10px;
+			margin: 25px auto;
+			width: 165px;
+			@extend .hr;	
+	}
+.about
+{
+	.big-title
+	{
+		@extend .big-text-top;
+	}
+	p
+	{
+		@extend .center;
+		@extend .text;
+		strong
+		{
+			font-size: 23px;
+		}
+	}
+	ul
+	{
+		margin: 70px 0;
+		li
+		{
+			@extend .in-b;
+			padding: 35px 15px;
+			i
+			{
+				@extend .center;
+				@extend .icon;
+				font-size: 40px;
+			}
+			strong
+			{
+				@extend .title-under-icon;
+				@extend .center;
+				padding:25px 0;
+			}
+			span
+			{
+				@extend .center;
+				@extend .text-under-icon;
+				padding: 0 45px;
+
+			}
+		}
+		li+li
+		{
+			border-left:1px solid #d9dbdb;
+			@media only screen and (min-width : 320px) and (max-width : 480px){
+				border-left:none;
+			}
+			@media only screen and (min-width : 480px) and (max-width : 768px){
+				border-left:none;
+			}
+		}
+	}
+}
+.services
+{
+	@extend .gbg;
+	position: relative;
+	min-height:580px;
+	.second-m
+	{
+		float: left;
+	}
+	.second-m+p
+	{
+		clear: both;
+		@extend .text;
+	}
+	.services-left
+	{
+		padding: 50px 80px;
+		@extend .gbg;
+		z-index: 1;
+		position: absolute;
+		@extend .inherit-h;
+		ul
+		{
+			li
+			{
+				padding-bottom:10px;
+				@extend .in-b;
+				i
+				{
+					@extend .icon;
+					font-size: 30px;
+				}
+				strong
+				{
+					@extend .title-under-icon;
+					padding:15px 0;
+				}
+				span
+				{
+					@extend .text-under-icon;
+					padding: 5px 0 ;
+				}
+			}
+		}
+	}
+	.services-right
+	{
+		@extend .inherit-h;
+		img
+		{
+			@extend .inherit-h;
+			@extend .full-width;
+		}
+		.grey-overlay
+		{
+			position: absolute;
+			@extend .inherit-h;
+			@extend .full-width;
+			top:0;
+			right: 0;
+			@extend .gbg;
+			opacity: 0.7;
+		}
+	}
+}
+.work
+{
+	overflow: hidden;
+	.big-title
+	{
+		@extend .big-text-top;
+	}
+	p
+	{
+		@extend .center;
+		@extend .text;
+	}
+	.work-samples
+	{
+		ul
+		{
+			li
+			{
+				position: relative;
+				@extend .in-b;
+				height: 240px;
+				&:hover
+				{
+					cursor: pointer;
+				}
+				img
+				{
+					@extend .full-width;
+					@extend .inherit-h;
+
+				}
+				.green-overlay
+				{
+					position: absolute;
+					background-color:$Green;
+					width: $overlay-w;
+					height: $overlay-w;
+					left: $overlay-margin;
+					right: $overlay-margin;
+					top: $overlay-margin;
+					bottom:$overlay-margin;
+					display: table;
+					margin-top: 240px;
+					p
+					{
+						color: $white;
+						font-size: 27px;
+						@extend .big-text;
+						@extend .center;
+						vertical-align: middle;
+						display: table-cell;
+					}
+				}
+			}
+		}
+	}
+}
+.contact
+{
+	.big-title
+	{
+		@extend .big-text-top;
+	}
+	p
+	{
+		@extend .center;
+		@extend .text;
+	}
+	.contact-form
+	{
+		background-color:#0b0b0b;
+		text-align: center;
+		padding: 30px 0;
+		input[type="text"] 
+		{
+			@extend .contact-form-inner;
+			height: 50px;
+		}
+		textarea
+		{
+			@extend .contact-form-inner;
+			height: 250px;
+		}
+	}
+}
+footer
+{
+	@extend .center;
+	color: #7e8287;
+	background-color:#000000;
+	text-transform: $upper;
+	line-height:70px;
+	font-size:15px;
+}
